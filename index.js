@@ -37,12 +37,12 @@ function extraiLinks(texto){
 }
 
 function trataErro (erro) {
-    throw new Error (erro); 
+    throw new Error (erro.code, "Não há arquivos no caminho"); 
 }
 
 // async || await
 async function pegaArquivo(caminhoDoArquivo) {
-    const encoding = "utf-8"
+    const encoding = "utf-8"; 
     try{
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding)
         return extraiLinks(texto)

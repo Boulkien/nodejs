@@ -15,7 +15,7 @@ describe("pegaArquivo::", () => {
         expect(result).toEqual(arrayResult)
     }) 
     it('Deve retornar a mensagem "Não há links"', async () => {
-        const result = await pegaArquivo("D:/Alura/NodeJs/CriandoPrimeiraBiblioteca/test/arquivos/texto1_semlinks.md")
-        expect(result).toBe("não há links.")
+        const result = await pegaArquivo("./test/arquivos/texto1_semlinks.md")
+        expect(result).toBe("Não há links")
     })
 })
